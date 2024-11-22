@@ -1,0 +1,46 @@
+\documentclass{article}
+
+% Packages
+\usepackage{amsthm} % For defining theorem-like environments
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+% Theorem-like environments
+\newtheorem{theorem}{Theorem}[section] % Theorems numbered by section
+\newtheorem{lemma}[theorem]{Lemma}      % Lemmas numbered like theorems
+\newtheorem{remark}[theorem]{Remark}    % Remarks numbered like theorems
+
+% Title and author
+\title{Your Article Title}
+\author{Isaia Nisoli}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% Abstract
+\begin{abstract}
+    Your abstract goes here.
+\end{abstract}
+
+% Sections
+\section{Introduction}
+
+\begin{theorem}
+    This is a theorem.
+\end{theorem}
+
+\begin{lemma}
+    This is a lemma.
+\end{lemma}
+
+\begin{remark}
+    This is a remark.
+\end{remark}
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}
