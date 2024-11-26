@@ -1,0 +1,103 @@
+\chapter{Why the reals?}
+
+\section{Some intuitive statements}
+Real numbers are the foundational block of real analysis and many of its characteristics and idiosinchrasies
+come from the use of real numbers.
+It is important to rembember that, even if they are an incredibly successful tool to modelize and predict 
+reality, real numbers are a mental construct and are strongly associated to our everyday experience, our education
+and the scale at which we experience the world.
+
+In this chapter I will try to provide some arguments to support this statement. One of the main sources
+that led me to this reasoning is \cite{Koerner2004}, a book I strongly recommend to the interested students.
+
+We start by a statement, based on everyday experience and that would be considered trivially true in 
+a conversation at the dinner table.
+
+\begin{statement}
+A bycicle travelling at constant velocity of $0.5$ meters per second in the direction of a wall,
+at some point in time will hit the wall.
+\end{statement}
+
+We will use the language of mathematics to formalize this situation, as an experiment: we will put 
+a long measurement tape on the ground, with the bycicle starting its run at the point $0$
+and the wall being situated at the point corresponding to $50$ meters.
+
+The movement of the front of the wheel of the bycicle can be described by the function 
+$x(t) = 0.5 t$, and the statement that the bycicle is going to hit the wall is equivalent 
+to the statement
+
+\begin{statement}\label{st:eq}
+Let $x(t) = 0.5 t$, then, there exists a $\tilde{t}$ such that $x(\tilde{t})=50$.  
+\end{statement}
+
+We can also think of this statement in a geometrical way: we imagine that the bycicle move along 
+a line, and the wall is another line orthogonal to the first one, and the statement becomes
+
+\begin{statement}\label{st:lines}
+Two orthogonal lines cross at a point.
+\end{statement}
+
+\section{Questioning the statements}
+An important epistemological, cultural and anthropogical question rises. 
+The first statement depends on the way we look at the world and the scale at which we observe phenomena.
+At the particle levels, phenomena as tunneling or the two slit experiment underline how our intuition 
+and our formalization of linear movement are dependent on our everyday experience.
+
+Statement \ref{st:eq} and \ref{st:lines} depend strongly on our costruction of the structure of the real numbers.
+The two statements are equivalent to the following theorem.
+
+\begin{theorem}
+Let $f:[a, b] \subset \mathbb{R}\to \mathbb{R}$ be a continuous function such that 
+$f(a)\leq 0 \leq f(b)$; then, there exists $c\in [a,b]$ such that $f(c)=0$.
+\end{theorem}
+
+Following \cite{Koerner2004}, we will show that this theorem is false if our domain are the rationals.
+Since the rationals are a metric space, they are a topological space and we can define limits and 
+continuity.
+The following example, though, is a counterexample to the theorem above on the rationals.
+
+\begin{example}
+Let $f:\mathbb{Q}\to \mathbb{Q}$ such that 
+\[
+f(x)=\begin{cases}
+    -1 & x< \sqrt{2}\\
+    1 & x> \sqrt{2}
+\end{cases}
+\]
+We restrict $f$ to $[0,2]$, then $f(0)<0$ and $f(2)>0$ but there is no $c$ such that $f(c)=0$ in $[0,2]$.
+\end{example}
+
+Or, by mirroring the statement in the section above; suppose our bycicle 
+moves on the rationals, i.e., the position of our bycicle is described by 
+$x(t) = 0.5t$ with $t\in \mathbb{Q}$; then our bycicle will never hit the wall at $x=\sqrt{2}$,
+or, in other words, two orthogonal lines built on the rationals may not cross at one point.
+We want the real numbers to mirror this intuition of the reality at our everyday scale, i.e.,
+we want the real numbers to be complete.
+In this course we will discuss the construction of the reals, starting from this idea of completeness.
+
+What I would like to stress is that while the real numbers are an effective mean of description 
+of reality, they are based on an intuition of the world and our vision of the world.
+A huge part of contemporary mathematics is devoted to the study of real numbers, their good, 
+their bad and their ugly.
+It is important to stress that there are alternatives and other, better systems may be developed in the future,
+but at the moment, the theoretical advantages and tradeoffs in other systems do not justify 
+adopting them and real numbers are the de facto benchmark and is a fundamental part of 
+the education of a mathematician to learn about them.
+
+One of the main objectives of this course is to try to give a pragmatical justification on many
+of the tools of real analysis, trying to explain why they matter in the wider panorama of science
+and not as a collection of formal results.
+
+\section{Identifying the main property}
+
+\begin{definition}
+A sequence in a set $X$ is a function that associates to each natural number 
+an element of $X$.
+\end{definition}
+
+
+\begin{property}
+Every increasing bounded sequence in $X$ has a limit.
+\end{property}
+
+\section{Construction of the reals: Dedekind cuts}

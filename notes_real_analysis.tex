@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{amsbook}
 
 % Packages
 \usepackage{amsthm} % For defining theorem-like environments
@@ -9,10 +9,18 @@
 % Theorem-like environments
 \newtheorem{theorem}{Theorem}[section] % Theorems numbered by section
 \newtheorem{lemma}[theorem]{Lemma}      % Lemmas numbered like theorems
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{property}[theorem]{Property}
+
+
+
+\theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}    % Remarks numbered like theorems
+\newtheorem{statement}[theorem]{Statement}    % Remarks numbered like theorems
+\newtheorem{example}[theorem]{Example} 
 
 % Title and author
-\title{Your Article Title}
+\title{A pragmatist view on Real Analysis}
 \author{Isaia Nisoli}
 \date{\today}
 
@@ -20,25 +28,9 @@
 
 \maketitle
 
-% Abstract
-\begin{abstract}
-    Your abstract goes here.
-\end{abstract}
+\include{introduction.tex}
+\include{why.tex}
 
-% Sections
-\section{Introduction}
-
-\begin{theorem}
-    This is a theorem.
-\end{theorem}
-
-\begin{lemma}
-    This is a lemma.
-\end{lemma}
-
-\begin{remark}
-    This is a remark.
-\end{remark}
 
 \bibliographystyle{plain}
 \bibliography{refs}
